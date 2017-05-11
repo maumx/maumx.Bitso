@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace maumx.Bitso.Entities.Response
 {
     internal sealed class GeneralResponse<T>
-        where T:BitsoEntity, new()
+        where T:class
     {
 
         public GeneralResponse()
         {
-            PayLoad = new T();
+            PayLoad = null;
             Error = null;
         }
         public Boolean Success { get; set; }
